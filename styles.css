@@ -70,6 +70,12 @@ nav li,
     margin: 0;
   }
 
+  nav ul {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
   nav a {
     font-size: 20px;
   }
@@ -79,26 +85,27 @@ nav li,
     width: 100%;
     text-align: center;
     margin: 15px;
-    display: none;
   }
 
   nav .button-container {
     order: 3;
     margin: 20px 0;
-    display: none;
-  }
-
-  nav .active {
-    display: block;
-  }
-
-  nav ul {
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
   }
 
   nav .button {
     font-size: 30px;
+  }
+
+  nav {
+    border-radius: 0 0 25px 25px;
+  }
+
+  nav.inactive {
+    border-radius: 0;
+  }
+
+  nav.inactive li.text,
+  nav.inactive li.button-container {
+    display: none;
   }
 }
