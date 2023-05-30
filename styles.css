@@ -34,7 +34,6 @@ nav a {
 nav a,
 .bars {
   color: white;
-  transition-duration: 0.5s;
   cursor: pointer;
   text-decoration: none;
 }
@@ -43,6 +42,7 @@ nav a,
 nav a:hover,
 .bars:hover {
   color: #57cffd;
+  transition-duration: 0.5s;
 }
 
 nav li,
@@ -70,20 +70,35 @@ nav li,
     margin: 0;
   }
 
+  nav a {
+    font-size: 20px;
+  }
+
   nav .text {
     order: 2;
     width: 100%;
     text-align: center;
     margin: 15px;
+    display: none;
   }
 
   nav .button-container {
     order: 3;
-    margin: 15px 15px;
+    margin: 20px 0;
+    display: none;
+  }
+
+  nav .active {
+    display: block;
   }
 
   nav ul {
     flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
+  }
+
+  nav .button {
+    font-size: 30px;
   }
 }
