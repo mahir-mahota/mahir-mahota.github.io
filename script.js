@@ -1,9 +1,17 @@
 const nav = document.getElementById("nav");
 const bars = document.querySelector(".bars");
-const bars_icon = document.querySelector(".fa-bars");
 
-bars.addEventListener("click", () => {
+function nav_active_toggle() {
   nav.classList.toggle("inactive");
-  bars_icon.classList.toggle("fa-bars");
-  bars_icon.classList.toggle("fa-close");
+}
+
+bars.addEventListener("click", nav_active_toggle);
+
+const nav_elements = document.querySelectorAll(".text, .button-container");
+
+nav_elements.forEach((element) => {
+  element.addEventListener("click", () => {
+    nav_active_toggle;
+    bars.click();
+  });
 });
