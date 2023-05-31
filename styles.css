@@ -102,7 +102,7 @@ nav li,
   .opened .line2 {
     stroke-dasharray: 1 60;
     stroke-dashoffset: -30;
-    stroke-width: 8;
+    stroke-width: 0;
   }
   .opened .line3 {
     stroke-dasharray: 90 207;
