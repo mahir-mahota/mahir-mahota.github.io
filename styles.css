@@ -74,6 +74,7 @@ nav li,
     cursor: pointer;
     display: flex;
     padding: 0;
+    user-select: none;
   }
   .line {
     fill: none;
