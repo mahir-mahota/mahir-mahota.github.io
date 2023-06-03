@@ -93,10 +93,15 @@ h1 {
   color: white;
   background-color: transparent;
   font-size: 140px;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Be Vietnam Pro", sans-serif;
   padding: 0;
-  padding-bottom: 120px;
+  padding-bottom: 140px;
   text-align: center;
+}
+
+.about {
+  background: red;
+  height: 100px;
 }
 
 @media all and (max-width: 800px) {
@@ -187,6 +192,7 @@ h1 {
   }
 
   h1 {
-    font-size: 80px;
+    font-size: 90px;
+    padding-bottom: 190px;
   }
 }
