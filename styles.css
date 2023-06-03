@@ -57,7 +57,7 @@ nav a,
 nav .text a:hover,
 nav .button-container a:hover,
 .bars:hover {
-  color: #57cffd;
+  color: #3395ff;
   transition-duration: 0.5s;
 }
 
@@ -92,7 +92,7 @@ nav li,
 h1 {
   color: white;
   background-color: transparent;
-  font-size: 150px;
+  font-size: 140px;
   font-family: "Montserrat", sans-serif;
   padding: 0;
   padding-bottom: 120px;
