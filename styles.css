@@ -6,6 +6,15 @@
   scroll-behavior: smooth;
 }
 
+#video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 nav {
   font-family: "Plus Jakarta Sans", sans-serif;
   padding: 20px 30px;
@@ -13,14 +22,14 @@ nav {
   width: 100%;
   top: 0;
   transition: 0.6s ease-out;
+  background: linear-gradient(to top, transparent, 40%, hsl(0 0% 0% / 0.9));
 }
 
 .logo,
-nav,
 nav ul,
 nav li,
 nav li a {
-  background: #232324;
+  background: transparent;
 }
 
 nav ul {
@@ -67,6 +76,26 @@ nav li,
 .logo {
   flex: 1;
   margin: 0px;
+}
+
+.cover-page {
+  background-color: hsl(0 0% 25% / 0.2);
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  color: white;
+  background-color: transparent;
+  font-size: 150px;
+  font-family: "Montserrat", sans-serif;
+  padding: 0;
+  padding-bottom: 120px;
+  text-align: center;
 }
 
 @media all and (max-width: 800px) {
@@ -141,6 +170,7 @@ nav li,
 
   nav {
     border-radius: 0 0 25px 25px;
+    background-color: hsl(0 0% 0% / 0.9);
   }
 
   nav.inactive {
@@ -150,5 +180,9 @@ nav li,
   nav.inactive li.text,
   nav.inactive li.button-container {
     display: none;
+  }
+
+  h1 {
+    font-size: 100px;
   }
 }
