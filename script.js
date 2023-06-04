@@ -11,7 +11,7 @@ const nav_elements = document.querySelectorAll(".text, .button-container");
 
 nav_elements.forEach((element) => {
   element.addEventListener("click", () => {
-    nav_active_toggle;
+    nav.classList.remove("inactive");
     bars.click();
   });
 });
