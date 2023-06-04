@@ -98,7 +98,7 @@ nav li,
   margin: 0px;
 }
 
-.cover-page {
+#cover-page {
   background-color: hsl(0 0% 25% / 0.2);
   height: 100vh;
   width: 100%;
@@ -119,7 +119,7 @@ h1 {
   position: fixed;
 }
 
-.about {
+#about {
   background: white;
   height: 100vh;
   position: relative;
@@ -128,14 +128,14 @@ h1 {
   justify-content: center;
 }
 
-.about img {
+#about img {
   max-height: 500px;
   border-radius: 20px;
   float: right;
   transition-duration: 0.5s;
 }
 
-.about img:hover {
+#about img:hover {
   transform: scale(1.05);
 }
 
@@ -214,7 +214,7 @@ h1 {
 
   nav {
     border-radius: 0 0 25px 25px;
-    background-color: hsl(0 0% 0% / 0.9);
+    background-color: hsl(0 0% 0% / 0.8);
   }
 
   nav.inactive {
