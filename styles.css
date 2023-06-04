@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300&family=Plus+Jakarta+Sans&display=swap");
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -19,6 +21,17 @@
   -o-object-fit: cover;
   object-fit: cover;
   overflow: hidden;
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(-100px);
+  transition-duration: 1.5s;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0px);
 }
 
 nav {
@@ -110,6 +123,20 @@ h1 {
   background: white;
   height: 100vh;
   position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.about img {
+  max-height: 500px;
+  border-radius: 20px;
+  float: right;
+  transition-duration: 0.5s;
+}
+
+.about img:hover {
+  transform: scale(1.05);
 }
 
 @media all and (max-width: 800px) {

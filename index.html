@@ -15,19 +15,14 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300&family=Plus+Jakarta+Sans&display=swap"
-      rel="stylesheet"
-    />
+    <script defer src="script.js"></script>
   </head>
   <body>
-    <video autoplay muted id="video">
-      <source src="./assets/background.mp4" type="video/mp4" />
-    </video>
     <section class="cover-page">
-      <h1>HI, I'M MAHIR!</h1>
+      <video autoplay muted id="video">
+        <source src="./assets/background.mp4" type="video/mp4" />
+      </video>
+      <h1 class="hidden">HI, I'M MAHIR!</h1>
     </section>
     <nav id="nav" class="inactive">
       <ul>
@@ -81,7 +76,8 @@
         </button>
       </ul>
     </nav>
-    <section class="about"></section>
-    <script src="script.js"></script>
+    <section class="about">
+      <!-- <img src="./assets/me.jpg" alt="me" /> -->
+    </section>
   </body>
 </html>
