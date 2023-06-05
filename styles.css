@@ -21,7 +21,7 @@
   -o-object-fit: cover;
   object-fit: cover;
   overflow: hidden;
-  filter: blur(2px);
+  filter: blur(0.9px);
 }
 
 .hidden {
