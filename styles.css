@@ -227,6 +227,10 @@ h1 {
     display: none;
   }
 
+  .logo:hover {
+    color: white;
+  }
+
   h1 {
     font-size: 90px;
     padding-bottom: 190px;
