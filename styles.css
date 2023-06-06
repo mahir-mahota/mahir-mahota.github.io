@@ -112,7 +112,7 @@ nav li,
 h1 {
   color: white;
   background-color: transparent;
-  font-size: 140px;
+  font-size: 9.5vw;
   font-family: "Be Vietnam Pro", sans-serif;
   padding: 0;
   padding-bottom: 130px;
@@ -232,7 +232,6 @@ h1 {
   }
 
   h1 {
-    font-size: 90px;
-    padding-bottom: 190px;
+    font-size: 85px;
   }
 }
