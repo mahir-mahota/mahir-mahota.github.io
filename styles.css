@@ -275,7 +275,14 @@ nav li,
   background-color: white;
   margin: 20px;
   font-family: "Plus Jakarta Sans", sans-serif;
-  font-size: 20px;
+  font-size: 23px;
+  line-height: 45px;
+}
+
+@media all and (max-width: 1200px) {
+  #about p {
+    line-height: 30px;
+  }
 }
 
 @media all and (max-width: 900px) {
