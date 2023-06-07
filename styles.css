@@ -1,3 +1,4 @@
+/* GENERAL SETUP */
 @import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300&family=Plus+Jakarta+Sans&display=swap");
 
 * {
@@ -12,6 +13,8 @@
   display: none;
 }
 
+/* COVER PAGE */
+
 #video {
   position: fixed;
   top: 0;
@@ -22,6 +25,39 @@
   object-fit: cover;
   overflow: hidden;
   filter: blur(0.9px);
+}
+
+#cover-page {
+  background-color: hsl(0 0% 25% / 0.2);
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  color: white;
+  background-color: transparent;
+  font-size: 9.5vw;
+  font-family: "Be Vietnam Pro", sans-serif;
+  padding: 0;
+  padding-bottom: 130px;
+  text-align: center;
+  position: fixed;
+}
+
+@media all and (max-width: 1100px) {
+  h1 {
+    font-size: 120px;
+  }
+}
+
+@media all and (max-width: 900px) {
+  h1 {
+    font-size: 85px;
+  }
 }
 
 .hidden {
@@ -35,6 +71,7 @@
   transform: translateY(0px);
 }
 
+/* NAVBAR */
 nav {
   font-family: "Plus Jakarta Sans", sans-serif;
   padding: 20px 30px;
@@ -99,48 +136,8 @@ nav li,
   margin: 0px;
 }
 
-#cover-page {
-  background-color: hsl(0 0% 25% / 0.2);
-  height: 100vh;
-  width: 100%;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-h1 {
-  color: white;
-  background-color: transparent;
-  font-size: 9.5vw;
-  font-family: "Be Vietnam Pro", sans-serif;
-  padding: 0;
-  padding-bottom: 130px;
-  text-align: center;
-  position: fixed;
-}
-
-#about {
-  background: white;
-  height: 100vh;
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-#about img {
-  max-height: 500px;
-  border-radius: 20px;
-  float: right;
-  transition-duration: 0.5s;
-}
-
-#about img:hover {
-  transform: scale(1.05);
-}
-
 @media all and (max-width: 800px) {
+  /* NAVBAR */
   .menu {
     background-color: #232324;
     border: none;
@@ -230,8 +227,67 @@ h1 {
   .logo:hover {
     color: white;
   }
+}
 
-  h1 {
-    font-size: 85px;
+/* ABOUT PAGE */
+#about {
+  background: white;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#about img {
+  max-height: 37vw;
+  border-radius: 20px;
+  float: right;
+  transition-duration: 0.5s;
+  margin: 50px;
+  background-color: white;
+}
+
+@media all and (max-width: 1440px) {
+  #about img {
+    max-height: 470px;
+  }
+}
+
+@media all and (max-width: 800px) {
+  #about img {
+    margin: 0px;
+    margin-bottom: 40px;
+  }
+}
+
+@media all and (max-width: 600px) {
+  #about img {
+    max-height: 350px;
+  }
+}
+
+#about img:hover {
+  transform: scale(1.05);
+}
+
+#about p {
+  background-color: white;
+  width: 700px;
+  margin-right: 70px;
+  margin-left: 50px;
+}
+
+@media all and (max-width: 800px) {
+  #about p {
+    margin: 50px;
+  }
+}
+
+@media all and (max-width: 1350px) {
+  #about p {
+    margin-top: 50px;
   }
 }
