@@ -302,6 +302,13 @@ nav li,
   }
 }
 
+#about .text-container {
+  background: transparent;
+}
+
 /* PROJECTS PAGE */
 #projects {
+  background: black;
+  min-height: 100vh;
+  position: relative;
 }
