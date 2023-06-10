@@ -103,7 +103,7 @@ nav a {
 
 .logo,
 nav a,
-.bars {
+nav .bars {
   color: white;
   cursor: pointer;
   text-decoration: none;
@@ -112,17 +112,17 @@ nav a,
 .logo:hover,
 nav .text a:hover,
 nav .button-container a:hover,
-.bars:hover {
+nav .bars:hover {
   color: #3395ff;
   transition-duration: 0.5s;
 }
 
 nav li,
-.button {
+nav .button {
   margin: 0px 20px;
 }
 
-.button-container {
+nav .button-container {
   margin: 0;
 }
 
@@ -311,4 +311,72 @@ nav li,
   background: #161616;
   min-height: 100vh;
   position: relative;
+  padding: 20px;
+}
+
+#projects .cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  background: #161616;
+}
+
+#projects .card {
+  background-color: white;
+  height: 400px;
+  width: 400px;
+  margin: 10px;
+  border-radius: 15px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.5s ease-in-out;
+}
+
+#projects .content {
+  background-color: white;
+  padding: 20px;
+  color: black;
+  overflow-x: hidden;
+  overflow-y: auto;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 20px;
+}
+
+#projects .expanded {
+  width: 90vw;
+  height: 95vh;
+  transition-duration: 0.8s;
+  transition-timing-function: ease-in-out;
+}
+
+#projects .non-focus {
+  display: none;
+}
+
+#projects .card:not(.expanded):hover {
+  transform: scale(1.08);
+}
+
+#projects img {
+  transition: transform 0.3s ease-in-out;
+  background-size: 300px;
+  height: 400px;
+}
+
+#projects img:hover {
+  transition: transform 0.5s ease-in-out;
+}
+
+#projects .card.expanded {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+
+#projects .card.expanded::-webkit-scrollbar {
+  display: none;
 }

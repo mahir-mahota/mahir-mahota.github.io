@@ -39,3 +39,23 @@ const observer = new IntersectionObserver((entries) => {
 const hiddenElements = document.querySelectorAll(".hidden");
 
 hiddenElements.forEach((element) => observer.observe(element));
+
+const cards = document.querySelectorAll(".card");
+
+cards.forEach((card) => {
+  card.addEventListener("click", () => {
+    if (card.classList.contains("expanded")) {
+      card.classList.remove("expanded");
+      cards.forEach((card) => {
+        card.classList.remove("non-focus");
+      });
+    } else {
+      card.classList.add("expanded");
+      cards.forEach((card) => {
+        if (!card.classList.contains("expanded")) {
+          card.classList.add("non-focus");
+        }
+      });
+    }
+  });
+});
