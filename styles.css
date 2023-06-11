@@ -59,6 +59,18 @@ h1 {
   }
 }
 
+h2 {
+  background: transparent;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 50px;
+}
+
+@media all and (max-width: 1200px) {
+  h2 {
+    font-size: 40px;
+  }
+}
+
 .hidden {
   opacity: 0;
   transform: translateY(-100px);
@@ -308,11 +320,8 @@ nav .button-container {
 }
 
 .about-title {
-  background: transparent;
-  font-family: "Plus Jakarta Sans", sans-serif;
   margin: 20px;
   margin-left: 20px;
-  font-size: 50px;
   color: black;
 }
 
@@ -404,12 +413,9 @@ nav .button-container {
 }
 
 .project-title {
-  background: transparent;
-  font-family: "Plus Jakarta Sans", sans-serif;
   margin: 17px;
   margin-left: 28px;
   margin-bottom: 30px;
-  font-size: 50px;
   color: white;
 }
 
