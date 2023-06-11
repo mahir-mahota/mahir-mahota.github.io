@@ -41,6 +41,7 @@ const hiddenElements = document.querySelectorAll(".hidden");
 hiddenElements.forEach((element) => observer.observe(element));
 
 const cards = document.querySelectorAll(".card");
+const project_title = document.querySelector(".project-title");
 
 cards.forEach((card) => {
   card.addEventListener("click", () => {
@@ -49,6 +50,7 @@ cards.forEach((card) => {
       cards.forEach((card) => {
         card.classList.remove("non-focus");
       });
+      project_title.classList.toggle("hide");
     } else {
       card.classList.add("expanded");
       cards.forEach((card) => {
@@ -56,6 +58,7 @@ cards.forEach((card) => {
           card.classList.add("non-focus");
         }
       });
+      project_title.classList.toggle("hide");
     }
   });
 });
