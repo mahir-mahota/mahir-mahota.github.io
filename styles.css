@@ -300,6 +300,7 @@ nav .button-container {
 #about p {
   background-color: white;
   margin: 20px;
+  margin-left: 30px;
   font-family: "Plus Jakarta Sans", sans-serif;
   font-size: 24px;
   line-height: 45px;
@@ -321,14 +322,14 @@ nav .button-container {
 
 .about-title {
   margin: 20px;
-  margin-left: 20px;
+  margin-left: 30px;
   color: black;
 }
 
 @media all and (max-width: 900px) {
   .about-title {
     margin-left: 40px;
-    margin-top: 30px;
+    margin-top: 60px;
   }
 }
 
@@ -420,7 +421,7 @@ nav .button-container {
   color: white;
 }
 
-@media all and (max-width: 900px) {
+@media all and (max-width: 450px) {
   .project-title {
     margin-left: 12px;
   }
