@@ -315,7 +315,7 @@ nav .button-container {
 @media all and (max-width: 900px) {
   #about p {
     font-size: 21px;
-    margin: 40px;
+    margin: 30px;
     margin-top: 0;
   }
 }
@@ -328,7 +328,7 @@ nav .button-container {
 
 @media all and (max-width: 900px) {
   .about-title {
-    margin-left: 40px;
+    margin-left: 30px;
     margin-top: 60px;
   }
 }
@@ -421,7 +421,7 @@ nav .button-container {
   color: white;
 }
 
-@media all and (max-width: 450px) {
+@media all and (max-width: 900px) {
   .project-title {
     margin-left: 12px;
   }
@@ -429,4 +429,22 @@ nav .button-container {
 
 .project-title.hide {
   display: none;
+}
+
+/* EXPERIENCE PAGE */
+#experience {
+  background: white;
+  min-height: 100vh;
+  position: relative;
+  padding: 20px;
+}
+
+.experience-title {
+  margin-left: 28px;
+}
+
+@media all and (max-width: 900px) {
+  .experience-title {
+    margin-left: 12px;
+  }
 }
