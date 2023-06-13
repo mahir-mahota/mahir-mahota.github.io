@@ -448,6 +448,12 @@ nav .button-container {
   transition-timing-function: ease-in-out;
 }
 
+@media all and (max-width: 1300px) and (min-width: 900px) {
+  #projects .expanded {
+    width: 85vw;
+  }
+}
+
 #projects .non-focus {
   display: none;
 }
