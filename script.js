@@ -55,7 +55,10 @@ var current_card_string = "card";
 
 cards.forEach((card) => {
   card.addEventListener("click", () => {
-    if (!card.classList.contains("expanded")) {
+    if (
+      !card.classList.contains("expanded") &&
+      !card.classList.contains("crossed")
+    ) {
       card.classList.add("expanded");
       cards.forEach((card) => {
         if (!card.classList.contains("expanded")) {
@@ -66,9 +69,14 @@ cards.forEach((card) => {
       arrows.forEach((arrow) => {
         arrow.classList.toggle("expanded");
       });
+      crosses.forEach((cross) => {
+        cross.classList.add("expanded");
+      });
       current_card = card;
       current = parseInt(current_card.classList[2].substring(4, 5));
     }
+
+    card.classList.remove("crossed");
   });
 });
 
@@ -76,6 +84,7 @@ crosses.forEach((cross) => {
   cross.addEventListener("click", () => {
     cards.forEach((card) => {
       if (card.classList.contains("expanded")) {
+        card.classList.add("crossed");
         card.classList.remove("expanded");
         cards.forEach((card) => {
           card.classList.remove("non-focus");
@@ -83,6 +92,9 @@ crosses.forEach((cross) => {
         project_title.classList.toggle("hide");
         arrows.forEach((arrow) => {
           arrow.classList.toggle("expanded");
+        });
+        crosses.forEach((cross) => {
+          cross.classList.remove("expanded");
         });
       }
     });
