@@ -1,6 +1,10 @@
 /* GENERAL SETUP */
 @import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300&family=Plus+Jakarta+Sans&family=Quicksand&display=swap");
 
+:root {
+  --blue: #03a9f4;
+  --grey: #111111;
+}
 * {
   box-sizing: border-box;
   padding: 0;
@@ -82,6 +86,64 @@ h2 {
   transform: translateY(0px);
 }
 
+#cover-page .arrow-container {
+  background: transparent;
+  display: block;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  bottom: 60px;
+  position: fixed;
+}
+
+#cover-page .arrow-container:hover {
+  cursor: pointer;
+}
+
+#cover-page .arrow-container:hover .arrow {
+  top: 50%;
+}
+
+#cover-page .arrow {
+  position: absolute;
+  left: 50%;
+  transition: all 0.4s ease;
+}
+
+#cover-page .arrow:before,
+#cover-page .arrow:after {
+  transition: all 0.4s ease;
+  content: "";
+  display: block;
+  position: absolute;
+  transform-origin: bottom right;
+  background: white;
+  width: 4px;
+  height: 50px;
+  border-radius: 10px;
+  transform: translate(-50%, -50%) rotateZ(-45deg);
+}
+
+#cover-page .arrow:after {
+  transform-origin: bottom left;
+  transform: translate(-50%, -50%) rotateZ(45deg);
+}
+
+#cover-page .arrow:nth-child(1) {
+  opacity: 0.3;
+  top: 35%;
+}
+
+#cover-page .arrow:nth-child(2) {
+  opacity: 0.6;
+  top: 55%;
+}
+
+#cover-page .arrow:nth-child(3) {
+  opacity: 0.9;
+  top: 75%;
+}
+
 /* NAVBAR */
 nav {
   font-family: "Plus Jakarta Sans", sans-serif;
@@ -125,7 +187,7 @@ nav .bars {
 nav .text a:hover,
 nav .button-container a:hover,
 nav .bars:hover {
-  color: #3395ff;
+  color: var(--blue);
   transition-duration: 0.5s;
 }
 
@@ -150,7 +212,7 @@ nav .button-container {
 @media all and (max-width: 900px) {
   /* NAVBAR */
   .menu {
-    background-color: #232324;
+    background-color: black;
     border: none;
     cursor: pointer;
     display: flex;
@@ -335,7 +397,7 @@ nav .button-container {
 
 /* PROJECTS PAGE */
 #projects {
-  background: #161616;
+  background: var(--grey);
   min-height: 100vh;
   position: relative;
   padding: 20px;
@@ -348,7 +410,7 @@ nav .button-container {
   justify-content: center;
   padding: 0;
   width: 100%;
-  background: #161616;
+  background: var(--grey);
 }
 
 #projects .card {
@@ -408,6 +470,7 @@ nav .button-container {
   overflow-x: hidden;
   overflow-y: scroll;
   scrollbar-width: none;
+  cursor: auto;
 }
 
 #projects .card.expanded::-webkit-scrollbar {
@@ -431,6 +494,41 @@ nav .button-container {
   display: none;
 }
 
+#projects .arrow {
+  display: none;
+  background: transparent;
+  transition-duration: 0.3s;
+  width: 35px;
+  height: 35px;
+  border-top: 3px solid white;
+  border-right: 3px solid white;
+  cursor: pointer;
+}
+
+#projects .arrow:hover {
+  border-top-color: var(--blue);
+  border-right-color: var(--blue);
+}
+
+#projects .arrow.expanded {
+  display: inline-block;
+}
+
+@media all and (max-width: 900px) {
+  #projects .arrow.expanded {
+    display: none;
+  }
+}
+
+#projects .arrow-right {
+  transform: rotate(45deg);
+  top: 50vh;
+}
+
+#projects .arrow-left {
+  transform: rotate(-135deg);
+}
+
 /* EXPERIENCE PAGE */
 #experience {
   background: white;
@@ -440,6 +538,7 @@ nav .button-container {
 }
 
 .experience-title {
+  margin-top: 12px;
   margin-left: 28px;
 }
 

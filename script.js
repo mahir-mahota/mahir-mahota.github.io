@@ -42,16 +42,12 @@ hiddenElements.forEach((element) => observer.observe(element));
 
 const cards = document.querySelectorAll(".card");
 const project_title = document.querySelector(".project-title");
+const arrows = document.querySelectorAll(".arrow");
+const crosses = document.querySelectorAll(".project-close");
 
 cards.forEach((card) => {
   card.addEventListener("click", () => {
-    if (card.classList.contains("expanded")) {
-      card.classList.remove("expanded");
-      cards.forEach((card) => {
-        card.classList.remove("non-focus");
-      });
-      project_title.classList.toggle("hide");
-    } else {
+    if (!card.classList.contains("expanded")) {
       card.classList.add("expanded");
       cards.forEach((card) => {
         if (!card.classList.contains("expanded")) {
@@ -59,6 +55,26 @@ cards.forEach((card) => {
         }
       });
       project_title.classList.toggle("hide");
+      arrows.forEach((arrow) => {
+        arrow.classList.toggle("expanded");
+      });
     }
+  });
+});
+
+arrows.forEach((arrow) => {
+  arrow.addEventListener("click", () => {
+    cards.forEach((card) => {
+      if (card.classList.contains("expanded")) {
+        card.classList.remove("expanded");
+        cards.forEach((card) => {
+          card.classList.remove("non-focus");
+        });
+        project_title.classList.toggle("hide");
+        arrows.forEach((arrow) => {
+          arrow.classList.toggle("expanded");
+        });
+      }
+    });
   });
 });
