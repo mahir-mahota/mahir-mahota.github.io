@@ -119,7 +119,7 @@ h2 {
   transform-origin: bottom right;
   background: white;
   width: 4px;
-  height: 50px;
+  height: 60px;
   border-radius: 10px;
   transform: translate(-50%, -50%) rotateZ(-45deg);
 }

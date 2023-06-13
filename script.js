@@ -11,7 +11,10 @@ const nav_elements = document.querySelectorAll(".text, .button-container");
 
 nav_elements.forEach((element) => {
   element.addEventListener("click", () => {
-    bars.click();
+    if (window.innerWidth <= 900) {
+      bars.click();
+    }
+    nav.classList.add("inactive");
   });
 });
 
