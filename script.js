@@ -22,7 +22,7 @@ var prevScrollpos = window.scrollY;
 
 window.onscroll = function () {
   var currentScrollPos = window.scrollY;
-  if (prevScrollpos > currentScrollPos) {
+  if (prevScrollpos > currentScrollPos && !nav.classList.contains("no")) {
     nav.style.top = "0";
   } else if (nav.classList.contains("inactive")) {
     nav.style.top = "-100px";
@@ -75,10 +75,14 @@ cards.forEach((card) => {
       current_card = card;
       current = parseInt(current_card.classList[2].substring(4, 5));
 
+      nav.classList.add("no");
       document.getElementById("projects").scrollIntoView();
     }
 
     card.classList.remove("crossed");
+    setTimeout(function () {
+      nav.classList.remove("no");
+    }, 600);
   });
 });
 
