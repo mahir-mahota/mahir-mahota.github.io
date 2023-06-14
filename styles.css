@@ -400,7 +400,7 @@ nav .button-container {
   background: var(--grey);
   min-height: 100vh;
   position: relative;
-  padding: 20px;
+  padding: 10px;
 }
 
 #projects .cards-container {
@@ -486,14 +486,14 @@ nav .button-container {
 
 .project-title {
   margin: 17px;
-  margin-left: 28px;
+  margin-left: 38px;
   margin-bottom: 30px;
   color: white;
 }
 
 @media all and (max-width: 900px) {
   .project-title {
-    margin-left: 12px;
+    margin-left: 22px;
   }
 }
 
