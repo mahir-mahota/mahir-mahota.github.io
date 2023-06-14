@@ -74,6 +74,8 @@ cards.forEach((card) => {
       });
       current_card = card;
       current = parseInt(current_card.classList[2].substring(4, 5));
+
+      document.getElementById("projects").scrollIntoView();
     }
 
     card.classList.remove("crossed");
