@@ -82,7 +82,7 @@ cards.forEach((card) => {
     card.classList.remove("crossed");
     setTimeout(function () {
       nav.classList.remove("no");
-    }, 600);
+    }, 1000);
   });
 });
 
