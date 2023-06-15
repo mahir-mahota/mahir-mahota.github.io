@@ -463,6 +463,12 @@ nav .button-container {
   transform: scale(1.08);
 }
 
+@media all and (max-width: 900px) {
+  #projects .card:not(.expanded):hover {
+    transform: none;
+  }
+}
+
 #projects img {
   transition: transform 0.3s ease-in-out;
   background-size: 300px;
