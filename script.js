@@ -139,10 +139,10 @@ arrows.forEach((arrow) => {
 
 document.addEventListener("keydown", function (event) {
   if (cards_container.classList.contains("expanded")) {
-    current_card.classList.remove("expanded");
-    current_card.classList.add("non-focus");
-
     if (event.key === "ArrowLeft") {
+      current_card.classList.remove("expanded");
+      current_card.classList.add("non-focus");
+
       current = current == 1 ? TOTAL_CARDS : current - 1;
 
       current_card_string = current_card_string.substring(0, 4);
@@ -159,6 +159,9 @@ document.addEventListener("keydown", function (event) {
       current_card.classList.add("expanded");
       current_card.classList.remove("non-focus");
     } else if (event.key === "ArrowRight") {
+      current_card.classList.remove("expanded");
+      current_card.classList.add("non-focus");
+
       current = current == TOTAL_CARDS ? 1 : current + 1;
 
       current_card_string = current_card_string.substring(0, 4);
@@ -174,6 +177,24 @@ document.addEventListener("keydown", function (event) {
 
       current_card.classList.add("expanded");
       current_card.classList.remove("non-focus");
+    } else if (event.key === "Escape") {
+      cards.forEach((card) => {
+        if (card.classList.contains("expanded")) {
+          card.classList.add("crossed");
+          card.classList.remove("expanded");
+          cards_container.classList.remove("expanded");
+          cards.forEach((card) => {
+            card.classList.remove("non-focus");
+          });
+          project_title.classList.toggle("hide");
+          arrows.forEach((arrow) => {
+            arrow.classList.toggle("expanded");
+          });
+          crosses.forEach((cross) => {
+            cross.classList.remove("expanded");
+          });
+        }
+      });
     }
   }
 });
