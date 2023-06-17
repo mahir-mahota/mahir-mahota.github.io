@@ -3,7 +3,7 @@
 
 :root {
   --blue: #03a9f4;
-  --grey: #111111;
+  --grey: #0b0b0b;
 }
 * {
   box-sizing: border-box;
@@ -432,7 +432,7 @@ nav .button-container {
   }
 }
 
-#projects .content {
+#projects .content p {
   background-color: white;
   padding: 20px;
   color: black;
@@ -469,14 +469,76 @@ nav .button-container {
   }
 }
 
-#projects img {
-  transition: transform 0.3s ease-in-out;
-  background-size: 300px;
-  height: 400px;
+#projects .card.expanded img {
+  width: 90vw;
+  height: auto;
 }
 
-#projects img:hover {
-  transition: transform 0.5s ease-in-out;
+@media all and (max-width: 1300px) and (min-width: 900px) {
+  #projects .card.expanded img {
+    width: 85vw;
+    height: auto;
+  }
+}
+
+@media all and (max-width: 900px) {
+  #projects .arm-card.expanded img {
+    width: 147vw;
+    height: auto;
+  }
+}
+
+@media all and (max-width: 500px) {
+  #projects .arm-card.expanded img {
+    width: 269vw;
+    height: auto;
+  }
+}
+
+@media all and (max-width: 900px) {
+  #projects .ev3-card.expanded img {
+    width: 136vw;
+    height: auto;
+  }
+}
+
+@media all and (max-width: 500px) {
+  #projects .ev3-card.expanded img {
+    width: 246vw;
+    height: auto;
+  }
+}
+
+@media all and (max-width: 900px) {
+  #projects .discord-card.expanded img {
+    width: 118vw;
+    height: auto;
+  }
+}
+
+@media all and (max-width: 500px) {
+  #projects .discord-card.expanded img {
+    width: 274vw;
+    height: auto;
+  }
+}
+
+@media all and (max-width: 900px) {
+  #projects .tic-card.expanded img {
+    width: 157vw;
+    height: auto;
+  }
+}
+
+@media all and (max-width: 500px) {
+  #projects .tic-card.expanded img {
+    width: 267vw;
+    height: auto;
+  }
+}
+
+#projects .arm-card img {
+  height: 400px;
 }
 
 #projects .card.expanded {
@@ -549,12 +611,12 @@ nav .button-container {
   padding: 0;
   width: 2.5em;
   height: 2.5em;
-  justify-self: center;
   border-radius: 10px;
   background: white;
   color: var(--grey);
   cursor: pointer;
   transition: 0.4s;
+  float: right;
   right: 20px;
   top: 20px;
   display: none;

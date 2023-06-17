@@ -43,6 +43,7 @@ const hiddenElements = document.querySelectorAll(".hidden");
 hiddenElements.forEach((element) => observer.observe(element));
 
 const cards = document.querySelectorAll(".card");
+const cards_container = document.querySelector(".cards-container");
 const project_title = document.querySelector(".project-title");
 const arrows = document.querySelectorAll(".arrow");
 const crosses = document.querySelectorAll(".project-close");
@@ -60,6 +61,7 @@ cards.forEach((card) => {
       !card.classList.contains("crossed")
     ) {
       card.classList.add("expanded");
+      cards_container.classList.add("expanded");
       cards.forEach((card) => {
         if (!card.classList.contains("expanded")) {
           card.classList.add("non-focus");
@@ -92,6 +94,7 @@ crosses.forEach((cross) => {
       if (card.classList.contains("expanded")) {
         card.classList.add("crossed");
         card.classList.remove("expanded");
+        cards_container.classList.remove("expanded");
         cards.forEach((card) => {
           card.classList.remove("non-focus");
         });
@@ -132,4 +135,45 @@ arrows.forEach((arrow) => {
     current_card.classList.add("expanded");
     current_card.classList.remove("non-focus");
   });
+});
+
+document.addEventListener("keydown", function (event) {
+  if (cards_container.classList.contains("expanded")) {
+    current_card.classList.remove("expanded");
+    current_card.classList.add("non-focus");
+
+    if (event.key === "ArrowLeft") {
+      current = current == 1 ? TOTAL_CARDS : current - 1;
+
+      current_card_string = current_card_string.substring(0, 4);
+      current_string = current.toString();
+
+      current_card_string = current_card_string.concat(current_string);
+
+      cards.forEach((card) => {
+        if (card.classList.contains(current_card_string)) {
+          current_card = card;
+        }
+      });
+
+      current_card.classList.add("expanded");
+      current_card.classList.remove("non-focus");
+    } else if (event.key === "ArrowRight") {
+      current = current == TOTAL_CARDS ? 1 : current + 1;
+
+      current_card_string = current_card_string.substring(0, 4);
+      current_string = current.toString();
+
+      current_card_string = current_card_string.concat(current_string);
+
+      cards.forEach((card) => {
+        if (card.classList.contains(current_card_string)) {
+          current_card = card;
+        }
+      });
+
+      current_card.classList.add("expanded");
+      current_card.classList.remove("non-focus");
+    }
+  }
 });
