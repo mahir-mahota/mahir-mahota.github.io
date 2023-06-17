@@ -481,6 +481,10 @@ nav .button-container {
   }
 }
 
+#projects img {
+  height: 400px;
+}
+
 @media all and (max-width: 900px) {
   #projects .arm-card.expanded img {
     width: 147vw;
@@ -532,13 +536,9 @@ nav .button-container {
 
 @media all and (max-width: 500px) {
   #projects .tic-card.expanded img {
-    width: 267vw;
+    width: 275vw;
     height: auto;
   }
-}
-
-#projects .arm-card img {
-  height: 400px;
 }
 
 #projects .card.expanded {
