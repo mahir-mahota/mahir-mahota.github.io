@@ -45,7 +45,7 @@ hiddenElements.forEach((element) => observer.observe(element));
 const cards = document.querySelectorAll(".card");
 const cards_container = document.querySelector(".cards-container");
 const project_title = document.querySelector(".project-title");
-const arrows = document.querySelectorAll(".arrow");
+const arrows = document.querySelectorAll(".project-arrow");
 const crosses = document.querySelectorAll(".project-close");
 
 const TOTAL_CARDS = 4;

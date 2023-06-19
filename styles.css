@@ -569,7 +569,7 @@ nav .button-container {
   display: none;
 }
 
-#projects .arrow {
+#projects .project-arrow {
   display: none;
   background: transparent;
   transition-duration: 0.3s;
@@ -580,17 +580,17 @@ nav .button-container {
   cursor: pointer;
 }
 
-#projects .arrow:hover {
+#projects .project-arrow:hover {
   border-top-color: var(--blue);
   border-right-color: var(--blue);
 }
 
-#projects .arrow.expanded {
+#projects .project-arrow.expanded {
   display: inline-block;
 }
 
 @media all and (max-width: 900px) {
-  #projects .arrow.expanded {
+  #projects .project-arrow.expanded {
     display: none;
   }
 }
