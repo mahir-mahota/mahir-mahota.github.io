@@ -1,0 +1,286 @@
+#projects {
+  background: $grey;
+  min-height: 100vh;
+  position: relative;
+  padding: 10px;
+
+  .cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    width: 100%;
+    background: $grey;
+  }
+
+  .card {
+    background-color: white;
+    height: 400px;
+    width: 400px;
+    margin: 10px;
+    border-radius: 15px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform 0.5s ease-in-out;
+    position: relative;
+
+    &.expanded {
+      width: 90vw;
+      height: 95vh;
+      transition-duration: 0.8s;
+      transition-timing-function: ease-in-out;
+    }
+
+    @media all and (max-width: 1300px) and (min-width: 900px) {
+      &.expanded {
+        width: 85vw;
+      }
+    }
+
+    &:not(.expanded):hover {
+      transform: scale(1.08);
+    }
+
+    @media all and (max-width: 900px) {
+      &:not(.expanded):hover {
+        transform: none;
+      }
+    }
+
+    &.expanded img {
+      width: 90vw;
+      height: auto;
+    }
+
+    @media all and (max-width: 1300px) and (min-width: 900px) {
+      &.expanded img {
+        width: 85vw;
+        height: auto;
+      }
+    }
+
+    &.expanded {
+      overflow-x: hidden;
+      overflow-y: scroll;
+      scrollbar-width: none;
+      cursor: auto;
+    }
+
+    &.expanded::-webkit-scrollbar {
+      display: none;
+    }
+
+    .overlay {
+      position: absolute;
+      background: linear-gradient(transparent, 60%, $grey);
+      height: 100%;
+      width: 100%;
+      opacity: 0%;
+      transition-duration: 0.5s;
+      transition-timing-function: ease-in-out;
+    }
+
+    @media all and (max-width: 900px) {
+      .overlay {
+        opacity: 80%;
+      }
+    }
+
+    &:hover .overlay {
+      opacity: 80%;
+    }
+
+    &.expanded .overlay {
+      display: none;
+    }
+
+    & .overlay h3 {
+      background: transparent;
+      color: white;
+      font-family: "Be Vietnam Pro", sans-serif;
+      position: absolute;
+      font-size: 40px;
+      bottom: 20px;
+      left: 20px;
+    }
+  }
+
+  .content p {
+    background-color: white;
+    padding: 20px;
+    color: black;
+    overflow-x: hidden;
+    overflow-y: auto;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 20px;
+  }
+
+  .non-focus {
+    display: none;
+  }
+
+  img {
+    height: 400px;
+  }
+
+  .arm-card {
+    @media all and (max-width: 900px) {
+      &.expanded img {
+        width: 147vw;
+        height: auto;
+      }
+    }
+
+    @media all and (max-width: 500px) {
+      &.expanded img {
+        width: 269vw;
+        height: auto;
+      }
+    }
+  }
+
+  .ev3-card {
+    @media all and (max-width: 900px) {
+      &.expanded img {
+        width: 136vw;
+        height: auto;
+      }
+    }
+
+    @media all and (max-width: 500px) {
+      &.expanded img {
+        width: 246vw;
+        height: auto;
+      }
+    }
+  }
+
+  .discord-card {
+    @media all and (max-width: 900px) {
+      &.expanded img {
+        width: 118vw;
+        height: auto;
+      }
+    }
+
+    @media all and (max-width: 500px) {
+      &.expanded img {
+        width: 274vw;
+        height: auto;
+      }
+    }
+  }
+
+  .tic-card.expanded {
+    @media all and (max-width: 900px) {
+      &.expanded img {
+        width: 157vw;
+        height: auto;
+      }
+    }
+
+    @media all and (max-width: 500px) {
+      &.expanded img {
+        width: 275vw;
+        height: auto;
+      }
+    }
+  }
+
+  .project-title {
+    margin: 17px;
+    margin-left: 38px;
+    margin-bottom: 30px;
+    color: white;
+
+    @media all and (max-width: 900px) {
+      & {
+        margin-left: 22px;
+      }
+    }
+
+    &.hide {
+      display: none;
+    }
+  }
+
+  .project-arrow {
+    display: none;
+    background: transparent;
+    transition-duration: 0.3s;
+    width: 35px;
+    height: 35px;
+    border-top: 3px solid white;
+    border-right: 3px solid white;
+    cursor: pointer;
+
+    &:hover {
+      border-top-color: $blue;
+      border-right-color: $blue;
+    }
+
+    &.expanded {
+      display: inline-block;
+    }
+
+    @media all and (max-width: 900px) {
+      &.expanded {
+        display: none;
+      }
+    }
+  }
+
+  .arrow-right {
+    transform: rotate(45deg);
+    top: 50vh;
+  }
+
+  .arrow-left {
+    transform: rotate(-135deg);
+  }
+
+  .project-close {
+    overflow: hidden;
+    position: absolute;
+    border: none;
+    padding: 0;
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: 10px;
+    background: white;
+    color: $grey;
+    cursor: pointer;
+    transition: 0.4s;
+    float: right;
+    right: 20px;
+    top: 20px;
+    display: none;
+
+    &.expanded {
+      display: block;
+    }
+
+    &:hover {
+      background: transparent;
+      color: $blue;
+    }
+
+    &:before,
+    &:after {
+      position: absolute;
+      top: 15%;
+      left: calc(50% - 0.0625em);
+      width: 3px;
+      height: 70%;
+      border-radius: 0.125em;
+      transform: rotate(45deg);
+      background: currentcolor;
+      content: "";
+    }
+
+    &:after {
+      transform: rotate(-45deg);
+    }
+  }
+}

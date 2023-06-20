@@ -1,0 +1,17 @@
+#experience {
+  background: white;
+  min-height: 100vh;
+  position: relative;
+  padding: 20px;
+
+  .experience-title {
+    margin-top: 12px;
+    margin-left: 28px;
+
+    @media all and (max-width: 900px) {
+      & {
+        margin-left: 12px;
+      }
+    }
+  }
+}

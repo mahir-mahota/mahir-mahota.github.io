@@ -1,0 +1,91 @@
+#about {
+  background: white;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+
+  @media all and (max-width: 900px) {
+    & {
+      flex-wrap: wrap;
+      padding: 5px;
+    }
+  }
+
+  img {
+    max-height: 37vw;
+    border-radius: 20px;
+    float: right;
+    transition-duration: 0.5s;
+    margin: 50px;
+    background-color: white;
+
+    @media all and (max-width: 1200px) {
+      & {
+        max-height: 40vw;
+      }
+    }
+
+    @media all and (max-width: 900px) {
+      & {
+        margin: 0px;
+        margin-bottom: 40px;
+        max-height: 400px;
+      }
+    }
+
+    @media all and (max-width: 550px) {
+      & {
+        margin: 0px;
+        margin-bottom: 40px;
+        max-height: 85vw;
+      }
+    }
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  .text-container {
+    background: transparent;
+  }
+
+  p {
+    background-color: white;
+    margin: 20px;
+    margin-left: 30px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 24px;
+    line-height: 45px;
+
+    @media all and (max-width: 1200px) {
+      & {
+        line-height: 35px;
+      }
+    }
+
+    @media all and (max-width: 900px) {
+      & {
+        font-size: 21px;
+        margin: 30px;
+        margin-top: 0;
+      }
+    }
+  }
+
+  .about-title {
+    margin: 20px;
+    margin-left: 30px;
+    color: black;
+
+    @media all and (max-width: 900px) {
+      & {
+        margin-left: 30px;
+        margin-top: 60px;
+      }
+    }
+  }
+}

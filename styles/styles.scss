@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300&family=Plus+Jakarta+Sans&family=Quicksand&display=swap");
+
+$blue: #03a9f4;
+$grey: #0b0b0b;
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  background: black;
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+h2 {
+  background: transparent;
+  font-family: "Quicksand", sans-serif;
+  font-size: 50px;
+
+  @media all and (max-width: 1200px) {
+    & {
+      font-size: 40px;
+    }
+  }
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(-100px);
+  transition-duration: 1.5s;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+@import "nav";
+@import "cover";
+@import "about";
+@import "projects";
+@import "experience";
