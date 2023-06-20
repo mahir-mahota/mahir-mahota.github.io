@@ -73,29 +73,33 @@
 
     .overlay {
       position: absolute;
-      background: linear-gradient(transparent, 60%, $grey);
+      background: linear-gradient(transparent, 60%, hsl(0 0% 0% / 0.7));
       height: 100%;
       width: 100%;
       opacity: 0%;
       transition-duration: 0.5s;
       transition-timing-function: ease-in-out;
-    }
 
-    @media all and (max-width: 900px) {
-      .overlay {
-        opacity: 80%;
+      @media all and (max-width: 900px) {
+        & {
+          opacity: 100%;
+
+          h3 {
+            font-size: 35px !important;
+          }
+        }
       }
     }
 
     &:hover .overlay {
-      opacity: 80%;
+      opacity: 100%;
     }
 
     &.expanded .overlay {
       display: none;
     }
 
-    & .overlay h3 {
+    .overlay h3 {
       background: transparent;
       color: white;
       font-family: "Be Vietnam Pro", sans-serif;
