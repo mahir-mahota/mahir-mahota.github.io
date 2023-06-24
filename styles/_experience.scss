@@ -8,10 +8,12 @@
   .experience-title {
     margin-top: 12px;
     margin-left: 28px;
+    margin-bottom: 25px;
 
     @media all and (max-width: 900px) {
       & {
         margin-left: 12px;
+        margin-bottom: 0px;
       }
     }
   }
@@ -27,119 +29,123 @@
   }
 
   .timeline {
-    width: 85%;
+    width: 90%;
     height: auto;
     max-width: 1000px;
     margin: 0 auto;
     position: relative;
     background: white;
+
+    @media only screen and (min-width: 900px) {
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 2px;
+        height: 100%;
+        background-color: $grey;
+      }
+    }
+
+    & ul {
+      list-style: none;
+      background: white;
+
+      & li {
+        padding: 30px;
+        background-color: $grey;
+        color: white;
+        border-radius: 20px;
+        margin-bottom: 15px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        @media only screen and (min-width: 900px) {
+          & {
+            width: 50%;
+            position: relative;
+            margin-bottom: 50px;
+
+            &:nth-child(odd) {
+              float: left;
+              clear: right;
+              transform: translateX(-30px);
+              border-radius: 20px 0px 20px 20px;
+            }
+
+            &:nth-child(even) {
+              float: right;
+              clear: left;
+              transform: translateX(30px);
+              border-radius: 0px 20px 20px 20px;
+            }
+
+            &::before {
+              content: "";
+              position: absolute;
+              height: 20px;
+              width: 20px;
+              border-radius: 50%;
+              background-color: $grey;
+              top: 0px;
+            }
+
+            &:nth-child(odd)::before {
+              transform: translate(50%, -50%);
+              right: -30px;
+            }
+
+            &:nth-child(even)::before {
+              transform: translate(-50%, -50%);
+              left: -30px;
+            }
+          }
+        }
+      }
+    }
   }
 
-  .timeline ul {
-    list-style: none;
-    background: white;
-  }
-
-  .timeline ul li {
-    padding: 20px;
-    background-color: $grey;
-    color: white;
-    border-radius: 10px;
-    margin-bottom: 20px;
-  }
-
-  .timeline ul li:last-child {
-    margin-bottom: 0;
-  }
-
-  .timeline-content h1 {
-    font-weight: 500;
-    font-size: 25px;
-    line-height: 30px;
-    margin-bottom: 10px;
-  }
-
-  .timeline-content p {
-    font-size: 16px;
-    line-height: 30px;
-    font-weight: 300;
-  }
-
-  .timeline-content .date {
-    font-size: 15px;
-    font-weight: 300;
-    margin-bottom: 10px;
-    letter-spacing: 2px;
-    color: white;
+  .timeline-content {
     background: transparent;
-  }
 
-  @media only screen and (min-width: 768px) {
-    .timeline:before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 2px;
-      height: 100%;
-      background-color: $grey;
+    & h4 {
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 30px;
+      margin-bottom: 5px;
+      background-color: transparent;
     }
 
-    .timeline-content .date {
-      font-size: 18px;
-      font-weight: 400;
-      color: black;
+    & p {
+      font-size: 23px;
+      line-height: 30px;
+      font-weight: 300;
+      background-color: transparent;
+    }
+
+    & .date {
+      font-size: 16px;
+      font-weight: 300;
+      margin-bottom: 20px;
+      letter-spacing: 2px;
+      color: white;
       background: transparent;
-    }
 
-    .timeline-container {
-      padding: 70px 0;
-    }
-
-    .timeline ul li {
-      width: 50%;
-      position: relative;
-      margin-bottom: 50px;
-    }
-
-    .timeline ul li:nth-child(odd) {
-      float: left;
-      clear: right;
-      transform: translateX(-30px);
-      border-radius: 20px 0px 20px 20px;
-    }
-
-    .timeline ul li:nth-child(even) {
-      float: right;
-      clear: left;
-      transform: translateX(30px);
-      border-radius: 0px 20px 20px 20px;
-    }
-
-    .timeline ul li::before {
-      content: "";
-      position: absolute;
-      height: 20px;
-      width: 20px;
-      border-radius: 50%;
-      background-color: $grey;
-      top: 0px;
-    }
-
-    .timeline ul li:nth-child(odd)::before {
-      transform: translate(50%, -50%);
-      right: -30px;
-    }
-
-    .timeline ul li:nth-child(even)::before {
-      transform: translate(-50%, -50%);
-      left: -30px;
-    }
-
-    .timeline-content .date {
-      position: absolute;
-      top: -30px;
+      @media only screen and (min-width: 900px) {
+        & {
+          font-size: 19px;
+          font-weight: 400;
+          color: black;
+          background: transparent;
+          position: absolute;
+          top: -30px;
+          left: 10px;
+        }
+      }
     }
   }
 }

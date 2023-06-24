@@ -14,7 +14,11 @@ nav_elements.forEach((element) => {
     if (window.innerWidth <= 900) {
       bars.click();
     }
+    nav.classList.add("no");
     nav.classList.add("inactive");
+    setTimeout(function () {
+      nav.classList.remove("no");
+    }, 1000);
   });
 });
 
