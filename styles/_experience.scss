@@ -22,7 +22,6 @@
     min-height: 100vh;
     width: 100%;
     display: flex;
-    align-items: center;
     justify-content: center;
     padding: 50px 0;
     background: white;
@@ -68,7 +67,7 @@
           & {
             width: 50%;
             position: relative;
-            margin-bottom: 50px;
+            margin-bottom: 60px;
 
             &:nth-child(odd) {
               float: left;
@@ -111,6 +110,36 @@
 
   .timeline-content {
     background: transparent;
+
+    a {
+      cursor: pointer;
+      transition-duration: 0.3s;
+      text-decoration: none;
+      background: transparent;
+      color: white;
+
+      .icon {
+        float: left;
+        margin-right: 10px;
+        margin-top: 1px;
+        font-size: 26px;
+        transition-duration: 0.1s;
+      }
+
+      .text {
+        transition-duration: 0.1s;
+      }
+
+      &:hover {
+        color: $blue;
+
+        @media only screen and (max-width: 900px) {
+          & {
+            color: white;
+          }
+        }
+      }
+    }
 
     & h4 {
       font-weight: 500;

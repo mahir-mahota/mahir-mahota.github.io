@@ -71,12 +71,15 @@ h2 {
 #nav .text a:hover,
 #nav .button-container a:hover,
 #nav .bars:hover {
-  color: #03a9f4;
+  color: #35baf6;
   transition-duration: 0.5s;
 }
 #nav li,
 #nav .button {
   margin: 0px 20px;
+}
+#nav .button {
+  font-size: 23px;
 }
 #nav .button-container {
   margin: 0;
@@ -521,8 +524,8 @@ h2 {
   cursor: pointer;
 }
 #projects .project-arrow:hover {
-  border-top-color: #03a9f4;
-  border-right-color: #03a9f4;
+  border-top-color: #35baf6;
+  border-right-color: #35baf6;
 }
 #projects .project-arrow.expanded {
   display: inline-block;
@@ -561,7 +564,7 @@ h2 {
 }
 #projects .project-close:hover {
   background: transparent;
-  color: #03a9f4;
+  color: #35baf6;
 }
 #projects .project-close:before, #projects .project-close:after {
   position: absolute;
@@ -600,7 +603,6 @@ h2 {
   min-height: 100vh;
   width: 100%;
   display: flex;
-  align-items: center;
   justify-content: center;
   padding: 50px 0;
   background: white;
@@ -643,7 +645,7 @@ h2 {
   #experience .timeline ul li {
     width: 50%;
     position: relative;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
   }
   #experience .timeline ul li:nth-child(odd) {
     float: left;
@@ -678,6 +680,31 @@ h2 {
 #experience .timeline-content {
   background: transparent;
 }
+#experience .timeline-content a {
+  cursor: pointer;
+  transition-duration: 0.3s;
+  text-decoration: none;
+  background: transparent;
+  color: white;
+}
+#experience .timeline-content a .icon {
+  float: left;
+  margin-right: 10px;
+  margin-top: 1px;
+  font-size: 26px;
+  transition-duration: 0.1s;
+}
+#experience .timeline-content a .text {
+  transition-duration: 0.1s;
+}
+#experience .timeline-content a:hover {
+  color: #35baf6;
+}
+@media only screen and (max-width: 900px) {
+  #experience .timeline-content a:hover {
+    color: white;
+  }
+}
 #experience .timeline-content h4 {
   font-weight: 500;
   font-size: 24px;
@@ -709,4 +736,18 @@ h2 {
     top: -30px;
     left: 10px;
   }
+}
+
+#footer {
+  height: 45px;
+  background: #18191a;
+  position: relative;
+}
+#footer h2 {
+  color: white;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 200;
+  font-size: 18px;
+  text-align: center;
+  padding: 10px;
 }/*# sourceMappingURL=styles.css.map */
