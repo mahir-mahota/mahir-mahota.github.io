@@ -117,7 +117,14 @@
     overflow-x: hidden;
     overflow-y: auto;
     font-family: "Plus Jakarta Sans", sans-serif;
-    font-size: 20px;
+    font-size: 21px;
+    margin-bottom: -25px;
+
+    @media all and (max-width: 900px) {
+      & {
+        font-size: 19px;
+      }
+    }
   }
 
   .non-focus {

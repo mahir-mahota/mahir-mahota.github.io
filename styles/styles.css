@@ -443,7 +443,13 @@ h2 {
   overflow-x: hidden;
   overflow-y: auto;
   font-family: "Plus Jakarta Sans", sans-serif;
-  font-size: 20px;
+  font-size: 21px;
+  margin-bottom: -25px;
+}
+@media all and (max-width: 900px) {
+  #projects .content p {
+    font-size: 19px;
+  }
 }
 #projects .non-focus {
   display: none;
@@ -687,14 +693,14 @@ h2 {
   background: transparent;
   color: white;
 }
-#experience .timeline-content a .icon {
+#experience .timeline-content a .resume-icon {
   float: left;
   margin-right: 10px;
   margin-top: 1px;
   font-size: 26px;
   transition-duration: 0.1s;
 }
-#experience .timeline-content a .text {
+#experience .timeline-content a .resume-text {
   transition-duration: 0.1s;
 }
 #experience .timeline-content a:hover {
