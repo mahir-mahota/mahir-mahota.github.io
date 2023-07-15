@@ -640,7 +640,7 @@ h2 {
 }
 #experience .timeline {
   width: 90%;
-  height: auto;
+  height: 700px;
   max-width: 1000px;
   margin: 0 auto;
   position: relative;
