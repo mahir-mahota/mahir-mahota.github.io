@@ -117,27 +117,40 @@
           <img class="img" src="./assets/arm.png" />
           <span class="content">
             <p>
-              What started as an ordinary robotic arm turned into my dive into
-              computer vision and the amazing word of image recognition using
-              OpenCV. I used Google's MediaPipe library to place 21 landmarks
-              onto my hand, each with individual coordinates relative to the
-              frame. These could then be transferred into an array and used to
-              detect when finger or palm positioning changed.
+              What started as an ordinary 6 domains of freedom robotic arm
+              turned into my dive into computer vision and the amazing world of
+              image recognition using OpenCV. I used Google's MediaPipe library
+              to place 21 landmarks onto my hand, each with individual
+              coordinates relative to the frame. These could then be transferred
+              into an array and used to detect when specific finger or palm
+              positioning changed.
             </p>
             <p>
-              I used these changes to define commands that could be sent to the
-              Arduino through serial communication over the HC-06 Bluetooth
-              module. The C++ program for the Arduino routinely...
+              I detected these changes to define commands related to various
+              hand gestures. The PySerial library was used to then send these
+              from the python program to the Arduino through serial
+              communication over an HC-06 Bluetooth module. After the hand was
+              calibrated by being held up for 30 frames, the C++ program on the
+              Arduino routinely polled the serial port to see if any commands
+              were queued and then executed them accordingly.
             </p>
             <p>
-              I wired the six servo motors to two external power supplies on a
-              breadboard to properly support their stall current. The ground
+              The six servo motors were wired to two external power supplies on
+              a breadboard to properly support their stall current. The ground
               wires of the motors and the power supplies were also soldered
               together with the ground on the Arduino. All of the wiring was
               then neatly hidden inside an acrylic base cut out using a bandsaw
               and then drilled together.
             </p>
           </span>
+          <iframe
+            class="video"
+            src="https://www.youtube.com/embed/djcaYWz_wmY?rel=0"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
         </div>
 
         <div class="card ev3-card card2">
@@ -147,8 +160,40 @@
           <span class="project-close"></span>
           <img class="img" src="./assets/ev3.png" />
           <span class="content">
-            <p>...</p>
+            <p>
+              This was the result of the final project for our first year
+              digital computation course. The robot plays a string on a guitar
+              by reading the notes in through a coloured strip. The strip itself
+              is constructed using a C++ program that converts a MIDI file into
+              colour coded squares. This is then passed into a gear mechanism
+              that rolls the strip through, passing it under various sensors for
+              detecting input.
+            </p>
+            <p>
+              I wrote functions in C to take input from colour and ultrasonic
+              sensors for accurately tracking task completion. Output from
+              onboard motor encoders was processed to play songs with up to five
+              frets. The fret playing mechanism consisted of a cam shaft that
+              rotated and pressed down on the string in different areas
+              depending on the angle of rotation. I wrote and optimised nine
+              different functions to work in sync together so that there was no
+              noticeable delay or lack of clarity in the notes. More information
+              can be found in the report
+              <a
+                href="./assets/The sEV3n Nation Army Report.pdf"
+                target="_blank"
+                >here</a
+              >.
+            </p>
           </span>
+          <iframe
+            class="video"
+            src="https://www.youtube.com/embed/CBR8fKITXuw?rel=0"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
         </div>
 
         <div class="card discord-card card3">
@@ -158,7 +203,26 @@
           <span class="project-close"></span>
           <img class="img" src="./assets/discord.png" />
           <span class="content">
-            <p>...</p>
+            <p>
+              Implemented text vectorisation to do sentiment analysis of movie
+              reviews with 98% accuracy. Designed, trained, and tested the
+              neural network for NLP with TensorFlow, using a dataset of 50K
+              IMDb reviews. Pre-processed the data using Pandas and prepared it
+              by vectorising and creating an input pipeline, separating
+              training, validation, and testing sets. Graphed the loss and
+              accuracy of the model over time using Matplotlib to detect any
+              discrepancies.
+            </p>
+            <p>
+              I created a Python web-scraper using BeautifulSoup4 to search a
+              query on Google and extract text from the top ten results. I then
+              developed a bot using the Python Discord API to interact with the
+              user, taking in a movie name and running the web-scraper after the
+              program searches it up. The content of the articles returned is
+              then passed into the model to predict whether reviews are positive
+              or not. The verdict is then given to the user in the chat
+              interface.
+            </p>
           </span>
         </div>
 
@@ -169,8 +233,43 @@
           <span class="project-close"></span>
           <img class="img" src="./assets/tic.png" />
           <span class="content">
-            <p>...</p>
+            <p>
+              This was a result of the two Toyota Innovation Challenges held at
+              the university. The first one was to program a solution for taking
+              images of cars at the right time on a conveyor belt, for quality
+              control. The aim was to detect the wheels with OpenCV computer
+              vision instead of the current standard of mechanical triggers, to
+              improve accuracy.
+            </p>
+            <p>
+              We developed a successful program in under 12 hours using OpenCV
+              code snippets, such as Hough transform and contour detection
+              functions. This was done collaboratively in a Jupyter Notebook
+              amongst a group of four. Both wheels are detected, and the front
+              one is bounded using a red square. When the front wheel passes a
+              certain point (denoted by the vertical red line), an image is
+              taken and saved. The code was tested on a scaled down model of the
+              factory system
+            </p>
+            <p>
+              The second challenge consisted of detecting the holes on vehicle
+              bodies that TMMC covers with stickers to prevent water leakage and
+              wind noise. This is usually done using a robotic arm equipped with
+              a camera and the goal was for our program to be able to detect
+              when a sticker was properly applied or not. I was successfully the
+              only one able to make the depth camera program function inside WSL
+              Ubuntu and our program worked well as intended, winning a Co-ops
+              Choice Award.
+            </p>
           </span>
+          <iframe
+            class="video"
+            src="https://www.youtube.com/embed/STk9KcRa3g0?rel=0"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
         </div>
 
         <span class="project-arrow arrow-right"></span>

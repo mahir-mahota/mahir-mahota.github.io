@@ -110,20 +110,54 @@
     }
   }
 
-  .content p {
-    background-color: white;
-    padding: 20px;
-    color: black;
-    overflow-x: hidden;
-    overflow-y: auto;
-    font-family: "Plus Jakarta Sans", sans-serif;
-    font-size: 21px;
-    margin-bottom: -25px;
+  .content {
+    p {
+      background-color: white;
+      padding: 20px;
+      color: black;
+      overflow-x: hidden;
+      overflow-y: auto;
+      font-family: "Plus Jakarta Sans", sans-serif;
+      font-size: 21px;
+      margin-bottom: -25px;
+      display: none;
 
-    @media all and (max-width: 900px) {
-      & {
-        font-size: 19px;
+      @media all and (max-width: 900px) {
+        & {
+          font-size: 19px;
+        }
       }
+    }
+
+    a {
+      background-color: white;
+      color: black;
+      overflow-x: hidden;
+      overflow-y: auto;
+      font-family: "Plus Jakarta Sans", sans-serif;
+      font-size: 21px;
+      transition-duration: 0.3s;
+
+      &:hover {
+        color: $blue;
+      }
+    }
+  }
+
+  .expanded {
+    p,
+    iframe {
+      display: block;
+    }
+  }
+
+  iframe {
+    display: none;
+    margin-top: 40px;
+
+    &.video {
+      aspect-ratio: 16 / 9;
+      width: 100%;
     }
   }
 

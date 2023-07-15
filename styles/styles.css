@@ -445,11 +445,36 @@ h2 {
   font-family: "Plus Jakarta Sans", sans-serif;
   font-size: 21px;
   margin-bottom: -25px;
+  display: none;
 }
 @media all and (max-width: 900px) {
   #projects .content p {
     font-size: 19px;
   }
+}
+#projects .content a {
+  background-color: white;
+  color: black;
+  overflow-x: hidden;
+  overflow-y: auto;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 21px;
+  transition-duration: 0.3s;
+}
+#projects .content a:hover {
+  color: #35baf6;
+}
+#projects .expanded p,
+#projects .expanded iframe {
+  display: block;
+}
+#projects iframe {
+  display: none;
+  margin-top: 40px;
+}
+#projects iframe.video {
+  aspect-ratio: 16/9;
+  width: 100%;
 }
 #projects .non-focus {
   display: none;
