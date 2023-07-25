@@ -1,12 +1,22 @@
 #nav {
   font-family: "Plus Jakarta Sans", sans-serif;
-  padding: 20px 30px;
+  padding: 5px 50px;
   position: fixed;
   width: 100%;
   top: 0;
   transition: 0.6s ease-out;
   background: black;
   z-index: 999;
+
+  @font-face {
+    font-family: Logo;
+    src: url(../assets/logo_font.ttf);
+  }
+
+  .logo {
+    font-family: Logo;
+    font-size: 35px;
+  }
 
   .logo,
   ul,
@@ -22,7 +32,6 @@
     align-items: center;
   }
 
-  .logo,
   a {
     font-size: 18px;
   }
@@ -35,7 +44,6 @@
     text-decoration: none;
   }
 
-  .logo:hover,
   .text a:hover,
   .button-container a:hover,
   .bars:hover {
@@ -66,6 +74,8 @@
   }
 
   @media all and (max-width: 900px) {
+    padding: 5px 30px;
+
     .menu {
       background-color: black;
       border: none;
@@ -150,10 +160,6 @@
     &.inactive li.text,
     &.inactive li.button-container {
       display: none;
-    }
-
-    .logo:hover {
-      color: white;
     }
   }
 }
