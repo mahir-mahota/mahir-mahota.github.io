@@ -158,7 +158,38 @@
           ></iframe>
         </div>
 
-        <div class="card ev3-card card2">
+        <div class="card htn23-card card2">
+          <div class="overlay">
+            <h3>Eye Controlled Trolley</h3>
+          </div>
+          <span class="project-close"></span>
+          <img class="img" src="./assets/htn23.png" />
+          <span class="content">
+            <p>
+              This was the project our team of 4 developed over Hack the North
+              2023. I programmed an ESP32 to drive 4 DC motors through L298N
+              H-bridges, enabling speed control through a phone or laptop over
+              WiFi. Data from a MPU6050 gyroscope was also processed to keep
+              track of what way the trolley was facing relative to its desired
+              direction. This allowed turning to be done autonomously after a
+              move command was processed. All of the components were then wired
+              together and soldered before being attached to the underside of a
+              3D printed chassis.
+            </p>
+            <p>
+              We also interfaced with AdHawk eye tracking glasses and their API
+              in Python to detect blinks and monitor gaze coordinates with 80%
+              accuracy, allowing the distance between points around the user to
+              be calculated. Double blinks were used to lock in a point and two
+              double blinks in a row would signify that the user wanted the
+              trolley to traverse the distance between them. Lastly, sockets
+              were used to connect the Python program with the ESP32 so that
+              commands could be sent properly.
+            </p>
+          </span>
+        </div>
+
+        <div class="card ev3-card card3">
           <div class="overlay">
             <h3>Guitar Playing Robot</h3>
           </div>
@@ -201,7 +232,7 @@
           ></iframe>
         </div>
 
-        <div class="card discord-card card3">
+        <div class="card discord-card card4">
           <div class="overlay">
             <h3>Movie Reviews Discord Bot</h3>
           </div>
@@ -231,7 +262,7 @@
           </span>
         </div>
 
-        <div class="card tic-card card4">
+        <div class="card tic-card card5">
           <div class="overlay">
             <h3>Wheel Tracking Algorithm</h3>
           </div>

@@ -501,6 +501,18 @@ h2 {
   }
 }
 @media all and (max-width: 900px) {
+  #projects .htn23-card.expanded img {
+    width: 135vw;
+    height: auto;
+  }
+}
+@media all and (max-width: 500px) {
+  #projects .htn23-card.expanded img {
+    width: 269vw;
+    height: auto;
+  }
+}
+@media all and (max-width: 900px) {
   #projects .ev3-card.expanded img {
     width: 136vw;
     height: auto;

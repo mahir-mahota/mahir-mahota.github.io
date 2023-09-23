@@ -185,6 +185,22 @@
     }
   }
 
+  .htn23-card {
+    @media all and (max-width: 900px) {
+      &.expanded img {
+        width: 135vw;
+        height: auto;
+      }
+    }
+
+    @media all and (max-width: 500px) {
+      &.expanded img {
+        width: 269vw;
+        height: auto;
+      }
+    }
+  }
+
   .ev3-card {
     @media all and (max-width: 900px) {
       &.expanded img {
