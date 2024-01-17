@@ -123,13 +123,12 @@
           <img class="img" src="./assets/arm.png" />
           <span class="content">
             <p>
-              What started as an ordinary 6 domains of freedom robotic arm
-              turned into my dive into computer vision and the amazing world of
-              image recognition using OpenCV. I used Google's MediaPipe library
-              to place 21 landmarks onto my hand, each with individual
-              coordinates relative to the frame. These could then be transferred
-              into an array and used to detect when specific finger or palm
-              positioning changed.
+              What started as an ordinary 6 DOF robotic arm turned into my dive
+              into computer vision and the amazing world of image recognition
+              using OpenCV. I used Google's MediaPipe library to place 21
+              landmarks onto my hand, each with individual coordinates relative
+              to the frame. These could then be transferred into an array and
+              used to detect when specific finger or palm positioning changed.
             </p>
             <p>
               I detected these changes to define commands related to various
@@ -159,26 +158,7 @@
           ></iframe>
         </div>
 
-        <!-- <div class="card brick-card card2">
-          <div class="overlay">
-            <h3>Brick Scanner</h3>
-          </div>
-          <span class="project-close"></span>
-          <img class="img" src="" />
-          <span class="content">
-            <p></p>
-          </span>
-          <iframe
-            class="video"
-            src=""
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-          ></iframe>
-        </div> -->
-
-        <div class="card htn23-card card3">
+        <div class="card htn23-card card2">
           <div class="overlay">
             <h3>Eye Controlled Trolley</h3>
           </div>
@@ -205,6 +185,35 @@
               trolley to traverse the distance between them. Lastly, sockets
               were used to connect the Python program with the ESP32 so that
               commands could be sent properly.
+            </p>
+          </span>
+        </div>
+
+        <div class="card brick-card card3">
+          <div class="overlay">
+            <h3>Brick Scanner</h3>
+          </div>
+          <span class="project-close"></span>
+          <img class="img" src="./assets/brick.png" />
+          <span class="content">
+            <p>
+              Tasked with developing a measuring system to accurately display
+              the dimensions of LEGO bricks, we set out to develop a computer
+              vision based solution with sub-millimeter accuracy. The final
+              architecture consisted of an STM32 Nucleo F401RE controlling
+              peripherals while also communicating with a Raspberry Pi 4 running
+              the CV program. I developed the firmware drivers that the STM32
+              used to operate two NEMA 17 stepper motors and an LCD display.
+            </p>
+            <p>
+              The stepper motor driver was developed using OOP concepts so that
+              multiple motor objects could be declared and controlled easily
+              without needlessly repetitive code. The onboard timer was used to
+              adjust speed and the microstepping pins were used to adjust the
+              resolution to suit our fine-tuned application. The communication
+              line to the RPi was then set up using UART and an ISR to handle
+              data coming in appropriately. The STM32 HAL was used to operate
+              the microcontroller and better abstract the functions used.
             </p>
           </span>
         </div>

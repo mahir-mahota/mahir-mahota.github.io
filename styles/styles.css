@@ -548,6 +548,18 @@ h2 {
     height: auto;
   }
 }
+@media all and (max-width: 900px) {
+  #projects .brick-card.expanded.expanded img {
+    width: 128vw;
+    height: auto;
+  }
+}
+@media all and (max-width: 500px) {
+  #projects .brick-card.expanded.expanded img {
+    width: 275vw;
+    height: auto;
+  }
+}
 #projects .project-title {
   margin: 17px;
   margin-left: 38px;

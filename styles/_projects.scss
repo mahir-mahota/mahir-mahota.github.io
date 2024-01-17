@@ -249,6 +249,22 @@
     }
   }
 
+  .brick-card.expanded {
+    @media all and (max-width: 900px) {
+      &.expanded img {
+        width: 128vw;
+        height: auto;
+      }
+    }
+
+    @media all and (max-width: 500px) {
+      &.expanded img {
+        width: 275vw;
+        height: auto;
+      }
+    }
+  }
+
   .project-title {
     margin: 17px;
     margin-left: 38px;

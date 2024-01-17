@@ -52,7 +52,7 @@ const project_title = document.querySelector(".project-title");
 const arrows = document.querySelectorAll(".project-arrow");
 const crosses = document.querySelectorAll(".project-close");
 
-const TOTAL_CARDS = 4;
+const TOTAL_CARDS = 6;
 var current = 1;
 var current_string;
 var current_card;
