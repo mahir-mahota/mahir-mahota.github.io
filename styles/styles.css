@@ -644,7 +644,7 @@ h2 {
 
 #experience {
   background: white;
-  min-height: 140vh;
+  min-height: 100vh;
   position: relative;
   padding: 20px;
   font-family: "Montserrat";
@@ -661,7 +661,7 @@ h2 {
   }
 }
 #experience .timeline-container {
-  min-height: 100vh;
+  height: 1100px;
   width: 100%;
   display: flex;
   justify-content: center;
